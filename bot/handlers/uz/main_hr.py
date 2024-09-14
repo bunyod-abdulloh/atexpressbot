@@ -25,5 +25,5 @@ async def back_main_menu(message: types.Message):
 @router.message(F.text == "⬅️ Ortga")
 async def back_to_main_menu(message: types.Message):
     await message.answer(
-        text=message.text, reply_markup=select_language_dkb
+        text="Tilni tanlang", reply_markup=select_language_dkb
     )

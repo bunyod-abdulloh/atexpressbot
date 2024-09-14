@@ -1,6 +1,6 @@
 from aiogram import Router, F, types
 
-from bot.keyboards.reply.users_dkb import second_main_dkb
+from bot.keyboards.reply.users_dkb import second_main_dkb, main_dkb
 from data.jsonfiles.uz import uz_dict
 
 router = Router()
@@ -11,5 +11,14 @@ async def up_to_first_rtr(message: types.Message):
     await message.answer(
         text=uz_dict["main_menu"], reply_markup=second_main_dkb(
             texts=uz_dict['up_to_main']
+        )
+    )
+
+
+@router.message(F.text == "⏪ Ortga")
+async def up_to_back_uz(message: types.Message):
+    await message.answer(
+        text=uz_dict["main_menu"], reply_markup=main_dkb(
+            texts=uz_dict['main_buttons']
         )
     )
