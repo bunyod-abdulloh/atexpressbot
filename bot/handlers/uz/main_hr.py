@@ -22,7 +22,7 @@ async def back_main_menu(message: types.Message):
     )
 
 
-@router.message(F.text == "⬅️ Ortga")
+@router.message(F.text == "◀️ Оrtga")
 async def back_to_main_menu(message: types.Message):
     await message.answer(
         text="Tilni tanlang", reply_markup=select_language_dkb

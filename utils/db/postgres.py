@@ -51,17 +51,14 @@ class Database:
         username varchar(100) NULL,
         telegram_id BIGINT NOT NULL UNIQUE,        
         phone VARCHAR(30) NULL,
-        address VARCHAR(500) NULL,
-        passport_a_side VARCHAR(300) NULL,
-        passport_b_side VARCHAR(300) NULL,
-        balance BIGINT DEFAULT 0                
+        up_more BOOLEAN NULL             
         );
         """
         await self.execute(sql, execute=True)
 
-    async def add_user(self, username, telegram_id):
-        sql = "INSERT INTO users (username, telegram_id) VALUES($1, $2)"
-        return await self.execute(sql, username, telegram_id, fetchrow=True)
+    async def add_user(self, telegram_id, up_more):
+        sql = "INSERT INTO users (telegram_id, up_more) VALUES($1, $2)"
+        return await self.execute(sql, telegram_id, up_more, fetchrow=True)
 
     async def update_user_fullname(self, fullname, telegram_id):
         sql = "UPDATE users SET full_name=$1 WHERE telegram_id=$2"

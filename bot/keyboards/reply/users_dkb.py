@@ -20,7 +20,7 @@ def main_dkb(texts):
     builder = ReplyKeyboardBuilder()
     for text in texts:
         builder.add(KeyboardButton(text=text))
-    builder.adjust(1, 1, 2, 1)
+    builder.adjust(1, 2, 1)
     return builder.as_markup(resize_keyboard=True)
 
 
@@ -45,4 +45,12 @@ def faq_dkb(texts):
     for text in texts:
         builder.add(KeyboardButton(text=text))
     builder.adjust(1, 2, 1)
+    return builder.as_markup(resize_keyboard=True)
+
+
+def profile_dkb(texts):
+    builder = ReplyKeyboardBuilder()
+    for text in texts:
+        builder.add(KeyboardButton(text=text))
+    builder.adjust(1)
     return builder.as_markup(resize_keyboard=True)

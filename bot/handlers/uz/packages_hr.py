@@ -6,7 +6,7 @@ from data.jsonfiles.uz import uz_dict
 router = Router()
 
 
-@router.message(F.text == "30 kg gacha bo'lgan jo'natmalar")
+@router.message(F.text == "📦 Jo'natmalar")
 async def up_to_first_rtr(message: types.Message):
     await message.answer(
         text=uz_dict["main_menu"], reply_markup=second_main_dkb(
@@ -15,7 +15,14 @@ async def up_to_first_rtr(message: types.Message):
     )
 
 
-@router.message(F.text == "⏪ Ortga")
+@router.message(F.text == "30 kg dan ko'p bo'lgan jo'natmalar")
+async def more_packages_rtr(message: types.Message):
+    await up_to_first_rtr(
+        message=message
+    )
+
+
+@router.message(F.text == "◀️ Ortgа")
 async def up_to_back_uz(message: types.Message):
     await message.answer(
         text=uz_dict["main_menu"], reply_markup=main_dkb(
