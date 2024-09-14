@@ -1,7 +1,7 @@
 from aiogram import Router, F, types
 
 from bot.keyboards.reply.users_dkb import profile_dkb
-from data.jsonfiles.uz import uz_profile_buttons
+from data.languages.uz import uz_profile_buttons
 
 router = Router()
 

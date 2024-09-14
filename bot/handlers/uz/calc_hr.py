@@ -1,7 +1,7 @@
 from aiogram import F, types, Router
 
 from bot.keyboards.reply.users_dkb import countries_dkb, second_main_dkb
-from data.jsonfiles.uz import uz_dict
+from data.languages.uz import uz_dict
 
 router = Router()
 

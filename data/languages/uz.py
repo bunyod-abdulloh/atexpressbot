@@ -13,8 +13,7 @@ uz_dict = {
                          "hisoblanadi.\n\nYuk og'irligini kiriting:\n\n<b>(Faqat raqam kiritilishi "
                          "lozim!)</b>",
     "faq": ["📝 Yetkazib berishni rasmiylashtirish", "🛃 Bojxonadan o'tish", "📖 Reklamatsiya siyosati", "◀️ Ortga"],
-    "call_to_operator": "So'rovingiz qabul qilindi! Operatorimiz tez orada Sizga aloqaga chiqadi",
-    "back": "🔙 Ortga"
+    "call_to_operator": "So'rovingiz qabul qilindi! Operatorimiz tez orada Sizga aloqaga chiqadi"
 }
 
 uz_profile_buttons = ["👤 Ism familiya o'zgartirish", "📱 Telefon raqam o'zgartirish", "🤖 Bot tilini o'zgartirish",
