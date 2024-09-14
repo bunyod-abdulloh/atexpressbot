@@ -22,3 +22,11 @@ async def back_calc_rtr(message: types.Message):
             texts=uz_dict['up_to_main']
         )
     )
+
+
+@router.message(F.text.in_(uz_dict['calc_countries']))
+async def calc_country_rtr(message: types.Message):
+    country = message.text.split(' ')[1]
+    await message.answer(
+        text=uz_dict['calc_country_text']
+    )

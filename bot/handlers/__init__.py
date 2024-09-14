@@ -5,7 +5,7 @@ from bot.filters import ChatPrivateFilter
 
 def setup_routers() -> Router:
     from .users import start_hr
-    from .uz import (main_hr, id_hr, up_to_hr, calc_uz_hr)
+    from .uz import (main_hr, id_hr, up_to_hr, calc_uz_up_hr)
     from .errors import error_handler
     from .admin import admin_main, admin_users, admin_downloads, admin_check
 
