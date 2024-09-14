@@ -3,15 +3,9 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.client.session.middlewares.request_logging import logger
+
 from bot.middlewares.mediagroup import MediaGroupMiddleware
-from aiogram.utils.i18n import I18n
 from loader import db
-
-I18N_DOMAIN = 'chinashopbot'
-LOCALES_DIR = 'data/jsonfiles/uz_json.json'
-
-# I18n obyektini yaratish
-i18n = I18n(path=LOCALES_DIR, domain=I18N_DOMAIN, default_locale='uz')
 
 
 def setup_handlers(dispatcher: Dispatcher) -> None:
@@ -27,7 +21,6 @@ def setup_middlewares(dispatcher: Dispatcher) -> None:
 
     dispatcher.message.middleware(ThrottlingMiddleware(slow_mode_delay=0.5))
     dispatcher.message.middleware(MediaGroupMiddleware())
-    dispatcher.message.middleware(i18n)
 
 
 def setup_filters(dispatcher: Dispatcher) -> None:
