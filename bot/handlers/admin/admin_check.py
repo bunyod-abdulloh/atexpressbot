@@ -2,7 +2,6 @@ from aiogram import Router, F, types
 from aiogram.fsm.context import FSMContext
 
 from bot.keyboards.inline.admin_ikb import admin_check_second_ikb
-from bot.keyboards.reply.main_dkb import uzmain_dkb, uzmain_start_dkb
 from bot.states import AdminState
 from loader import bot
 
@@ -16,8 +15,7 @@ async def admincheck_yes_rtr(call: types.CallbackQuery):
     await bot.send_message(
         chat_id=user_id,
         text=f"Sizning ID olish so'rovingiz tasdiqlandi!\n\nID raqamingiz: <code>{user_shop_id}</code>"
-             f"\n\nManzilni <b>📍 Manzil olish</b> tugmasi orqali olishingiz mumkin!",
-        reply_markup=uzmain_dkb()
+             f"\n\nManzilni <b>📍 Manzil olish</b> tugmasi orqali olishingiz mumkin!"
     )
     await call.message.edit_text(
         text="Habar foydalanuvchiga yuborildi!"
@@ -56,7 +54,7 @@ async def admincheck_second_yes_rtr(call: types.CallbackQuery, state: FSMContext
     await bot.send_message(
         chat_id=user_id,
         text=f"Sizning ID olish so'rovingiz rad etildi!\n\n<b>Sabab:</b>\n{admin_disclaimer}\n\nIltimos, so'rovingizni "
-             f"qayta yuboring!", reply_markup=uzmain_start_dkb
+             f"qayta yuboring!"
     )
     await call.message.edit_text(
         text="Habar foydalanuvchiga yuborildi!"

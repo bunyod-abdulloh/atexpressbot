@@ -1,21 +1,29 @@
 from aiogram import Router, types, F
-from aiogram.filters import CommandStart
 
-from bot.keyboards.reply.main_dkb import uzmain_start_dkb, uzmain_dkb
+from bot.keyboards.reply.users_dkb import main_dkb, select_language_dkb
+from data.jsonfiles.uz import uz_dict
 
 router = Router()
 
 
-@router.message(CommandStart())
-async def do_start(message: types.Message, i18n):
-    full_name = message.from_user.full_name
-
+@router.message(F.text == "🇺🇿 O'zbek")
+async def main_hr(message: types.Message):
     await message.answer(
-        text=i18n.gettxt("start"))
+        text=uz_dict["main_menu"], reply_markup=main_dkb(
+            texts=uz_dict["main_buttons"]
+        )
+    )
 
 
 @router.message(F.text == "🏡 Bosh sahifa")
 async def back_main_menu(message: types.Message):
     await message.answer(
-        text=message.text, reply_markup=uzmain_dkb
+        text=message.text
+    )
+
+
+@router.message(F.text == "⬅️ Ortga")
+async def back_to_main_menu(message: types.Message):
+    await message.answer(
+        text=message.text, reply_markup=select_language_dkb
     )
