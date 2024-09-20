@@ -15,13 +15,6 @@ async def up_to_first_rtr(message: types.Message):
     )
 
 
-@router.message(F.text == "30 kg dan ko'p bo'lgan jo'natmalar")
-async def more_packages_rtr(message: types.Message):
-    await up_to_first_rtr(
-        message=message
-    )
-
-
 @router.message(F.text == "◀️ Ortgа")
 async def up_to_back_uz(message: types.Message):
     await message.answer(
