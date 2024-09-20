@@ -17,8 +17,8 @@ async def main_hr(message: types.Message):
 
 @router.message(F.text == "🏡 Bosh sahifa")
 async def back_main_menu(message: types.Message):
-    await message.answer(
-        text=message.text
+    await main_hr(
+        message=message
     )
 
 
