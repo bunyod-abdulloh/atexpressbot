@@ -24,9 +24,9 @@ async def get_iduz_yes_rtr(call: types.CallbackQuery):
 
 @router.callback_query(F.data == "get_iduz_no")
 async def get_iduz_no_rtr(call: types.CallbackQuery, state: FSMContext):
-    await db.add_user(
-        username=call.from_user.username, telegram_id=call.from_user.id
-    )
+    # await db.add_user(
+    #     username=call.from_user.username, telegram_id=call.from_user.id
+    # )
     await call.message.edit_text(
         text="Ism va familiyangizni kiriting:\n\n<b>(Namuna: Kimdir Kimdirov)</b>"
     )
