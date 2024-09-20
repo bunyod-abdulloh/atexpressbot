@@ -8,7 +8,7 @@ uz_dict = {
                   "🇰🇬 Qirg'iziston", "🇷🇺 Rossiya", "🇹🇯 Tojikiston", "◀️ Ortga"],
     "calc_countries": ["🇺🇿 O'zbekiston", "🇦🇿 Ozarbayjon", "🇦🇲 Armaniston", "🇧🇾 Belorussiya", "🇰🇿 Qozoq'iston",
                        "🇰🇬 Qirg'iziston", "🇷🇺 Rossiya", "🇹🇯 Tojikiston"],
-    "calc_country_text": "O'zbekistonga umumiy qiymati 320 yevrogacha bo'lgan jo'natmalarni pochta va "
+    "calc_country_text": "ga umumiy qiymati 320 yevrogacha bo'lgan jo'natmalarni pochta va "
                          "kuryerlik shaklida yetkazish xizmati mavjud. Jo'natmaning umumiy og'irligi kg larda "
                          "hisoblanadi.\n\nYuk og'irligini kiriting:\n\n<b>(Faqat raqam kiritilishi "
                          "lozim!)</b>",
